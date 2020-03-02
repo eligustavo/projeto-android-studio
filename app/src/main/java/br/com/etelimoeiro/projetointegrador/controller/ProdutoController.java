@@ -1,5 +1,7 @@
 package br.com.etelimoeiro.projetointegrador.controller;
 
+import java.util.List;
+
 import br.com.etelimoeiro.projetointegrador.dao.ProdutoDAO;
 import br.com.etelimoeiro.projetointegrador.db.ConexaoSQL;
 import br.com.etelimoeiro.projetointegrador.domain.Produto;
@@ -15,6 +17,14 @@ public class ProdutoController {
 
     public long salvarProduto(Produto produto) {
         return this.produtoDAO.salvarProduto(produto);
+    }
+
+    public List<Produto> getListaProdutosController() {
+        return this.produtoDAO.getListaProdutosDAO();
+    }
+
+    public boolean excluirProdutoController(long idProduto){
+        return this.produtoDAO.excluirProdutoDAO(idProduto);
     }
 
 }
