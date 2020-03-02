@@ -30,19 +30,19 @@
         android:layout_height="10dp" />
 
     <EditText
-        android:id="@+id/edtPrecoProduto"
+        android:id="@+id/edtValorProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Preço do Produto"
+        android:hint="Valor do Produto"
         android:inputType="numberDecimal" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="25dp" />
-    
+
     <Button
         android:id="@+id/btnSalvarProduto"
         android:layout_width="match_parent"
-        android:text="Salvar"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
 </LinearLayout>
