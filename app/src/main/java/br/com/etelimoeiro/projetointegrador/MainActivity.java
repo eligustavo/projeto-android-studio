@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.etelimoeiro.projetointegrador.activities.ActivityProduto;
+import br.com.etelimoeiro.projetointegrador.controller.ProdutoController;
 import br.com.etelimoeiro.projetointegrador.db.ConexaoSQL;
+import br.com.etelimoeiro.projetointegrador.domain.Produto;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ConexaoSQL conexao = ConexaoSQL.getInstancia(this);
+        ConexaoSQL.getInstancia(this);
 
         this.btnSalvarProduto = (Button) findViewById(R.id.btnSalvarProduto);
 

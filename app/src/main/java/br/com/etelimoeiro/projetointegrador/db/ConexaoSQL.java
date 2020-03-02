@@ -30,7 +30,7 @@ public class ConexaoSQL extends SQLiteOpenHelper {
                 "CREATE TABLE IF NOT EXISTS tbproduto " +
                         "(" +
                         "id INTEGER PRIMARY KEY, " +
-                        "nome TEXT," +
+                        "nomeProduto TEXT," +
                         "qtd INTEGER," +
                         "valor REAL " +
                         ")";

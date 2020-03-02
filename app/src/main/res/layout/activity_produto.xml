@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".activities.ActivityProduto">
 
+
+    <EditText
+        android:id="@+id/edtIdProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id:"
+        android:inputType="numberSigned" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
     <EditText
         android:id="@+id/edtNomeProduto"
         android:layout_width="match_parent"
