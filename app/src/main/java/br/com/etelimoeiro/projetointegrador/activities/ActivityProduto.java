@@ -51,14 +51,13 @@ public class ActivityProduto extends AppCompatActivity {
                 if (produtoCadastro != null) {
 
                     ProdutoController produtoController = new ProdutoController(ConexaoSQL.getInstancia(ActivityProduto.this));
-                    long id = produtoController.salvarProduto(produtoCadastro);
+                    long idProduto = produtoController.salvarProduto(produtoCadastro);
 
-                    if(id > 0){
+                    if (idProduto > 0) {
                         Toast.makeText(ActivityProduto.this, "Produto salvo com sucesso", Toast.LENGTH_LONG).show();
-                    }else {
+                    } else {
                         Toast.makeText(ActivityProduto.this, "Produto não pode ser salvo", Toast.LENGTH_LONG).show();
                     }
-
 
                 } else {
                     Toast.makeText(ActivityProduto.this, "Todos os campos são obrigatórios!", Toast.LENGTH_LONG).show();
