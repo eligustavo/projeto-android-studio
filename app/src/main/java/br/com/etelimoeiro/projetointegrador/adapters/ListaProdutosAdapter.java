@@ -56,4 +56,11 @@ public class ListaProdutosAdapter extends BaseAdapter {
 
         return v;
     }
+
+    public void Atualizar(List<Produto> produto){
+        this.produtoList.clear();
+        this.produtoList = produto;
+        this.notifyDataSetChanged();
+    }
+
 }

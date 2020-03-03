@@ -25,13 +25,15 @@ public class ListaProdutosActivity extends AppCompatActivity {
     private ListView lsvProdutos;
     private List<Produto> produtoList;
     private ListaProdutosAdapter adapterListaProdutos;
+    private ProdutoController produtoController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_produtos);
 
-        final ProdutoController produtoController = new ProdutoController(ConexaoSQL.getInstancia(ListaProdutosActivity.this));
+        this.produtoController = new ProdutoController(ConexaoSQL.getInstancia(ListaProdutosActivity.this));
+
         produtoList = produtoController.getListaProdutosController();
 
         this.lsvProdutos = (ListView) findViewById(R.id.lsvListaProdutos);
@@ -104,4 +106,9 @@ public class ListaProdutosActivity extends AppCompatActivity {
         });
 
     }
+
+    public void eventAtualizarProd(View v) {
+        this.adapterListaProdutos.Atualizar(this.produtoController.getListaProdutosController());
+    }
+
 }

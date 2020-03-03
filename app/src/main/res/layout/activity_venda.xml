@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ActivityVenda">
+    android:orientation="vertical"
+    tools:context=".activities.VendaActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Spinner
+        android:id="@+id/spnProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <EditText
+        android:id="@+id/edtQtdProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe a quantidade de produtos"
+        android:inputType="numberSigned" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Produto" />
+
+        <Button
+            android:id="@+id/btnFinalizaVenda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar Venda" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lsvProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

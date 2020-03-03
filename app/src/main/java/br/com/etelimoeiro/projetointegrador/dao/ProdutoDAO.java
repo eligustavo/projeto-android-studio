@@ -111,4 +111,38 @@ public class ProdutoDAO {
         return true;
     }
 
+    public boolean atualizarProdutoDAO(Produto produto) {
+        SQLiteDatabase db = null;
+
+        try {
+
+            db = this.conexao.getWritableDatabase();
+
+            ContentValues produtoValue = new ContentValues();
+            produtoValue.put("nomeProduto", produto.getNomeProduto());
+            produtoValue.put("qtd", produto.getQtd());
+            produtoValue.put("valor", produto.getValor());
+
+          int atualizou =  db.update(
+                    "tbproduto",
+                    produtoValue,
+                    "id = ?",
+                    new String[]{String.valueOf(produto.getId())}
+            );
+
+          if(atualizou > 0 ){
+              return true;
+          }
+
+        } catch (Exception e) {
+            Log.d("PRODUTODAO", "não foi possível atualizar o produto");
+        } finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+            return false;
+    }
+
+
 }

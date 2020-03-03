@@ -27,4 +27,8 @@ public class ProdutoController {
         return this.produtoDAO.excluirProdutoDAO(idProduto);
     }
 
+    public boolean atualizarProdutoController(Produto produto){
+        return this.produtoDAO.atualizarProdutoDAO(produto);
+    }
+
 }

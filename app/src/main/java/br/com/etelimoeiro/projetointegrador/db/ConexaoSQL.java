@@ -37,6 +37,25 @@ public class ConexaoSQL extends SQLiteOpenHelper {
 
         db.execSQL(sqlTabelaProduto);
 
+        String sqlTabelaVenda =
+                "CREATE TABLE IF NOT EXISTS tbvendas" +
+                        "(" +
+                        "id INTEGER PRIMARY KEY," +
+                        "data INTEGER" +
+                        ")";
+
+        db.execSQL(sqlTabelaVenda);
+
+        String sqlTabelaItemVenda =
+                "CREATE TABLE IF NOT EXISTS tbitemvenda" +
+                "(" +
+                        "id INTEGER PRIMARY KEY," +
+                        "quantidade_venda INTEGER," +
+                        "id_produto INTEGER," +
+                        "id_venda" +
+                        ")";
+            db.execSQL(sqlTabelaItemVenda);
+
     }
 
     @Override

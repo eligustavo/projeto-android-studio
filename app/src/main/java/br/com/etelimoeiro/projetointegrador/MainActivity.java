@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import br.com.etelimoeiro.projetointegrador.activities.ActivityProduto;
+import br.com.etelimoeiro.projetointegrador.activities.ActivityVenda;
 import br.com.etelimoeiro.projetointegrador.activities.ListaProdutosActivity;
 import br.com.etelimoeiro.projetointegrador.controller.ProdutoController;
 import br.com.etelimoeiro.projetointegrador.db.ConexaoSQL;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnSalvarProduto;
     private Button btnListaProdutos;
-
+    private Button btnVendas;
 
 
     @Override
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         this.btnSalvarProduto = (Button) findViewById(R.id.btnSalvarProduto);
 
         this.btnListaProdutos = (Button) findViewById(R.id.btnListaProdutos);
+
+        this.btnVendas = (Button) findViewById(R.id.btnVendas);
 
         this.btnSalvarProduto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListaProdutosActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        this.btnVendas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, ActivityVenda.class);
+                startActivity(intent);
+
             }
         });
 
