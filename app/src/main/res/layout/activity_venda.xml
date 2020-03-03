@@ -4,13 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".activities.VendaActivity">
+    tools:context=".activities.ActivityVenda">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione o produto:"/>
 
     <Spinner
         android:id="@+id/spnProduto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></Spinner>
+        android:layout_height="40dp"></Spinner>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
 
     <EditText
         android:id="@+id/edtQtdProduto"
@@ -26,19 +36,28 @@
 
         <Button
             android:id="@+id/btnAddProduto"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Adicionar Produto" />
 
         <Button
             android:id="@+id/btnFinalizaVenda"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Finalizar Venda" />
 
     </LinearLayout>
 
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carrinho de compras" />
     <ListView
         android:id="@+id/lsvProdutos"
         android:layout_width="match_parent"
